@@ -1,0 +1,38 @@
+ul {
+  list-style: none; 
+  display: flex; /* Aligne les éléments horizontalement */
+  justify-content: space-around; /* Espace égal entre les éléments */
+  padding: 10px; /* Espacement intérieur pour aérer la barre */
+  margin: 0; /* Supprime les marges par défaut */
+  background-color: #333;
+  opacity: 0.8; /* Couleur de fond sombre */
+  border-radius: 10px; /* Coins arrondis pour un look moderne */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour une meilleure séparation */
+  transition: box-shadow 0.3s ease; /* Ajoute une transition pour les interactions */
+
+}
+
+ button {
+  font-size: xx-large; /* Texte très visible */
+  color: tomato; /* Couleur vive pour le texte */
+  padding: 10px 15px; /* Ajoute de l’espace autour du texte */
+  transition: color 0.3s ease, transform 0.3s ease; 
+  background-color: transparent;
+  border: none;
+  border-radius: 10px; /* Ajoute des transitions pour les interactions */
+}
+
+/* Effet au survol pour les éléments de liste */
+button:hover {
+  color: #582900; /* Changement de couleur du texte */
+  background-color: tomato; /* Arrière-plan en survol */
+  transform: scale(1.1); /* Agrandissement subtil */
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: 3px dashed #582900;
+  outline-offset: 5px; /* Espace entre le contour et le bouton */
+}
+

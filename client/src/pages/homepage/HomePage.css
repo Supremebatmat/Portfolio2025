@@ -1,0 +1,64 @@
+body {
+  background-image: url(../../assets/images/fond.png);
+  background-size: cover;
+  background-attachment: scroll; /* Active l'effet de parallaxe */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 95%;
+  margin-right: 10px;
+  justify-content: center;
+  gap: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.mathieu-priez {
+  width: 400px; /* Taille des images */
+  height: auto; /* Maintient les proportions */
+  border-radius: 50%; /* Forme circulaire */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour un effet moderne */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour plusieurs effets */
+  border: 15px ridge #582900; /* Bordure élégante */
+}
+
+/* Effets au survol */
+.mathieu-priez:hover {
+  transform: scale(1.1); /* Agrandit légèrement */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Accentue l'ombre */
+  filter: brightness(1.2); /* Augmente légèrement la luminosité */
+}
+.presentation {
+  font-size: 1.1em; /* Taille de police ajustée pour une meilleure lisibilité */
+  color: black;
+  text-align: justify; /* Texte aligné de manière élégante */
+  padding: 20px; /* Ajout d’un espacement intérieur pour mieux aérer */
+  border: 15px ridge #582900; /* Bordure élégante */
+  background-color: bisque; /* Couleur de fond douce */
+  border-radius: 15px; /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile pour donner de la profondeur */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition sur le survol */
+}
+
+/* Effet au survol */
+.presentation:hover {
+  transform: scale(
+    1.05
+  ); /* Agrandit légèrement au survol pour un effet subtil */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre accentuée au survol */
+}
