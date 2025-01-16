@@ -1,38 +1,73 @@
+/* Styles pour la liste */
 ul {
-  list-style: none; 
+  list-style: none;
   display: flex; /* Aligne les éléments horizontalement */
   justify-content: space-around; /* Espace égal entre les éléments */
-  padding: 10px; /* Espacement intérieur pour aérer la barre */
+  padding: 15px; /* Espacement intérieur pour aérer la barre */
   margin: 0; /* Supprime les marges par défaut */
-  background-color: #333;
-  opacity: 0.8; /* Couleur de fond sombre */
-  border-radius: 10px; /* Coins arrondis pour un look moderne */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour une meilleure séparation */
-  transition: box-shadow 0.3s ease; /* Ajoute une transition pour les interactions */
-
+  background: linear-gradient(90deg, #3a3a3a, #2c2c2c); /* Couleur de fond métallique sombre */
+  border: 3px solid #a47e3c; /* Bordure dorée pour un style antique */
+  border-radius: 15px; /* Coins arrondis pour plus de fluidité */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5), inset 0 2px 4px
+    rgba(255, 255, 255, 0.1); /* Effet en relief */
+  opacity: 0.95; /* Légèrement transparent pour l'esthétique */
+  transition: box-shadow 0.3s ease; /* Transition douce */
 }
 
- button {
+/* Styles pour les boutons */
+button {
+  font-family: "Cormorant Garamond", serif; /* Police classique et élégante */
   font-size: xx-large; /* Texte très visible */
-  color: tomato; /* Couleur vive pour le texte */
-  padding: 10px 15px; /* Ajoute de l’espace autour du texte */
-  transition: color 0.3s ease, transform 0.3s ease; 
-  background-color: transparent;
-  border: none;
-  border-radius: 10px; /* Ajoute des transitions pour les interactions */
+  color: #a47e3c; /* Couleur dorée pour le texte */
+  padding: 10px 20px; /* Ajoute de l’espace autour du texte */
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(90deg, #4a4a4a, #2c2c2c); /* Fond métallique texturé */
+  border: 3px solid #a47e3c; /* Bordure dorée contrastée */
+  border-radius: 10px; /* Coins arrondis pour un look moderne */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), inset 0 2px 4px
+    rgba(255, 255, 255, 0.1); /* Relief sur le bouton */
+  cursor: pointer;
 }
 
-/* Effet au survol pour les éléments de liste */
+/* Effet au survol des boutons */
 button:hover {
-  color: #582900; /* Changement de couleur du texte */
-  background-color: tomato; /* Arrière-plan en survol */
+  color: #2c2c2c; /* Texte sombre */
+  background: linear-gradient(90deg, #a47e3c, #cfa564); /* Arrière-plan doré lumineux */
   transform: scale(1.1); /* Agrandissement subtil */
-  cursor: pointer; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 2px 6px
+    rgba(255, 255, 255, 0.3); /* Ombre renforcée */
 }
 
+/* Effet au clic des boutons */
+button:active {
+  transform: scale(0.95); /* Rétrécissement pour simuler l'enfoncement */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.6); /* Effet d'enfoncement */
+}
+
+/* Style pour le focus des boutons */
 button:focus {
-  outline: 3px dashed #582900;
-  outline-offset: 5px; /* Espace entre le contour et le bouton */
+  outline: 2px dashed #cfa564; /* Contour doré antique */
+  outline-offset: 5px; /* Espacement du contour */
 }
 
+/* Boutons désactivés */
+button:disabled {
+  color: #777; /* Texte grisé */
+  cursor: not-allowed; /* Indique que le bouton n'est pas cliquable */
+  background: linear-gradient(90deg, #3a3a3a, #2c2c2c); /* Fond plus terne */
+  border: 3px solid #777; /* Bordure grisée */
+}
+
+/* Version mobile */
+@media (max-width: 600px) {
+  ul {
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centrage des éléments */
+    padding: 20px; /* Plus d’espace pour le confort */
+  }
+
+  button {
+    width: 100%; /* Occupe toute la largeur */
+    text-align: center; /* Centre le texte */
+  }
+}

@@ -1,0 +1,99 @@
+/* Conteneur principal */
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2c2c2c, #3a3a3a); /* Métallique brossé */
+  padding: 30px;
+  border: 5px double #a47e3c; /* Bordure dorée */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 4px 8px
+    rgba(255, 255, 255, 0.1);
+  width: 60%;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.95;
+  animation: fadeIn 1.5s ease-in-out;
+  margin-top: 10vh;
+  height: 70vh;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titre */
+.form-title {
+  font-size: 2em;
+  font-family: "Cormorant Garamond", serif;
+  color: #ffdca1;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulaire */
+.contact-form {
+  width: 100%;
+}
+
+/* Groupes de champs */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.2em;
+  font-family: "Cormorant Garamond", serif;
+  color: #ffdca1;
+  margin-bottom: 5px;
+}
+
+/* Champs de saisie */
+.form-group input,
+.form-group textarea {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1em;
+  padding: 10px;
+  border: 3px ridge #a47e3c;
+  border-radius: 10px;
+  background: #fffbe0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #582900;
+  box-shadow: 0 0 8px rgba(88, 41, 0, 0.7);
+}
+
+/* Bouton de soumission */
+.submit-button {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #582900, #a47e3c);
+  color: #fffbe0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}

@@ -3,23 +3,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import HomePage from "./pages/homepage/homePage";
+import ContactForm from "./pages/contact/contact";
+import HomePage from "./pages/homepage/HomePage";
 import Project from "./pages/project/Project";
 /* ************************************************************************* */
 
-// Import the main app component
-// import App from "./App";
-
-// Import additional components for new routes
-// Try creating these components in the "pages" folder
-
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-
-/* ************************************************************************* */
-
-// Create router configuration with routes
-// You can add more routes as you build out your app!
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -32,11 +20,13 @@ const router = createBrowserRouter([
         path: "/mes-projets",
         element: <Project />,
       },
+      {
+        path: "/contact",
+        element: <ContactForm />,
+      },
     ],
   },
 ]);
-
-
 
 const rootElement = document.getElementById("root");
 if (rootElement == null) {

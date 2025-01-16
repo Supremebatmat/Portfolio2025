@@ -1,9 +1,13 @@
+/* Style général pour le fond */
 body {
   background-image: url(../../assets/images/fond.png);
   background-size: cover;
-  background-attachment: scroll; /* Active l'effet de parallaxe */
+  background-attachment: scroll; /* Active un léger effet de parallaxe */
+  font-family: "Cormorant Garamond", serif; /* Police rétro et élégante */
+  color: #333; /* Couleur de base pour un bon contraste */
 }
 
+/* Animation d'apparition */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -15,50 +19,74 @@ body {
   }
 }
 
+/* Conteneur central */
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 80vh;
-  width: 95%;
-  margin-right: 10px;
-  justify-content: center;
-  gap: 50px;
-  margin-left: 30px;
-  margin-right: 30px;
+  justify-content: space-around;
+  height: auto;
+  gap: 50px; /* Espacement entre les éléments */
   animation: fadeIn 1.5s ease-in-out;
+  padding: 30px;
+  border: 5px double #a47e3c; /* Bordure dorée avec un effet sophistiqué */
+  border-radius: 20px; /* Coins arrondis */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0 4px 10px
+    rgba(255, 255, 255, 0.1);
+  width: 85%;
+  margin: 15vh;
+  place-self: center;
 }
+
+/* Style pour les images circulaires */
 .mathieu-priez {
   width: 400px; /* Taille des images */
   height: auto; /* Maintient les proportions */
   border-radius: 50%; /* Forme circulaire */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour un effet moderne */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Ombre douce */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour plusieurs effets */
-  border: 15px ridge #582900; /* Bordure élégante */
+  border: 15px ridge #a47e3c; /* Bordure dorée et texturée */
 }
 
-/* Effets au survol */
+/* Effets au survol des images */
 .mathieu-priez:hover {
   transform: scale(1.1); /* Agrandit légèrement */
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Accentue l'ombre */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Accentue l'ombre */
   filter: brightness(1.2); /* Augmente légèrement la luminosité */
 }
+
+/* Style pour la présentation */
 .presentation {
-  font-size: 1.1em; /* Taille de police ajustée pour une meilleure lisibilité */
-  color: black;
+  max-width: 600px;
+  font-size: 1.2em; /* Taille de police ajustée pour une meilleure lisibilité */
+  color: #333; /* Texte sombre pour un contraste agréable */
   text-align: justify; /* Texte aligné de manière élégante */
-  padding: 20px; /* Ajout d’un espacement intérieur pour mieux aérer */
-  border: 15px ridge #582900; /* Bordure élégante */
-  background-color: bisque; /* Couleur de fond douce */
-  border-radius: 15px; /* Coins arrondis */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile pour donner de la profondeur */
+  padding: 20px; /* Espacement intérieur */
+  border: 15px ridge #a47e3c; /* Bordure dorée et texturée */
+  background-color: bisque; /* Couleur de fond douce et chaleureuse */
+  border-radius: 15px; /* Coins arrondis pour plus de douceur */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre subtile */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition sur le survol */
 }
 
-/* Effet au survol */
+/* Effet au survol pour la présentation */
 .presentation:hover {
-  transform: scale(
-    1.05
-  ); /* Agrandit légèrement au survol pour un effet subtil */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre accentuée au survol */
+  transform: scale(1.05); /* Agrandit légèrement pour attirer l'attention */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Accentue l'ombre */
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Empile les éléments verticalement */
+    gap: 30px; /* Réduit l'espacement entre les éléments */
+  }
+
+  .mathieu-priez {
+    width: 300px; /* Réduit la taille des images */
+  }
+
+  .presentation {
+    font-size: 1em; /* Réduit la taille du texte */
+    padding: 15px; /* Réduit l'espacement intérieur */
+  }
 }

@@ -1,15 +1,17 @@
 .footer {
-  background-color: #333;
-  opacity: 0.8;/* Rend tout semi-transparent, y compris le texte */ /* Couleur de fond sombre */
-  position:static; /* Fixe le footer en bas de l'écran */
-  bottom: 0; /* Aligné en bas */
-  left: 0;
-  width: 100%; /* Prend toute la largeur */
-  padding: 10px 0; /* Ajuste l'espacement intérieur */
-  text-align: center; /* Centre le texte */
-  border-top: 2px solid #e9ecef; /* Ligne de séparation plus visible */
-  font-size: medium; /* Taille de texte équilibrée */
-  color: tomato; /* Texte coloré */
-  height: auto; /* Supprime la contrainte de hauteur pour s'adapter au contenu */
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile pour le relief */
+  list-style: none;
+  display: flex; /* Aligne les éléments horizontalement */
+  justify-content: space-around; /* Espace égal entre les éléments */
+  padding: 15px; /* Espacement intérieur pour aérer la barre */
+  margin: 0; /* Supprime les marges par défaut */
+  background: linear-gradient(90deg, #3a3a3a, #2c2c2c); /* Couleur de fond métallique sombre */
+  border: 3px solid #a47e3c; /* Bordure dorée pour un style antique */
+  border-radius: 15px; /* Coins arrondis pour plus de fluidité */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5), inset 0 2px 4px
+    rgba(255, 255, 255, 0.1); /* Effet en relief */
+  opacity: 0.95; /* Légèrement transparent pour l'esthétique */
+  transition: box-shadow 0.3s ease; /* Transition douce */
+  color: #a47e3c;
+
+  margin-top: 20vh;
 }
