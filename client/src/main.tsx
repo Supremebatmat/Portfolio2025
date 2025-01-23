@@ -6,6 +6,7 @@ import App from "./App";
 import ContactForm from "./pages/contact/contact";
 import HomePage from "./pages/homepage/HomePage";
 import Project from "./pages/project/Project";
+import Guestbook from "./pages/guestbook/GuestBook";
 /* ************************************************************************* */
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactForm />,
+      },
+      {
+        path: "/guestbook",
+        element: <Guestbook/>,
       },
     ],
   },

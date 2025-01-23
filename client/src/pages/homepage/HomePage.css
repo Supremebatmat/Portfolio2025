@@ -30,8 +30,8 @@ body {
   padding: 30px;
   border: 5px double #a47e3c; /* Bordure dorée avec un effet sophistiqué */
   border-radius: 20px; /* Coins arrondis */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0 4px 10px
-    rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
+    inset 0 4px 10px rgba(255, 255, 255, 0.1);
   width: 85%;
   margin: 15vh;
   place-self: center;
@@ -70,7 +70,7 @@ body {
 
 /* Effet au survol pour la présentation */
 .presentation:hover {
-  transform: scale(1.05); /* Agrandit légèrement pour attirer l'attention */
+  transform: scale(1.25); /* Agrandit légèrement pour attirer l'attention */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Accentue l'ombre */
 }
 
@@ -89,4 +89,113 @@ body {
     font-size: 1em; /* Réduit la taille du texte */
     padding: 15px; /* Réduit l'espacement intérieur */
   }
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 85%;
+  border: 5px double #a47e3c; /* Bordure cuivrée */
+  border-radius: 20px; /* Coins arrondis */
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.5), /* Ombre externe */
+    inset 0 4px 10px rgba(255, 255, 255, 0.1), /* Lumière interne subtile */
+    inset 0 -4px 10px rgba(0, 0, 0, 0.3); /* Ombre interne subtile */
+  margin: 15vh auto; /* Centrage vertical et horizontal */
+  place-self: center;
+  position: relative; /* Nécessaire pour l'effet ::after */
+  overflow: hidden; /* Empêche les débordements */
+  background: linear-gradient(135deg, #3e3b32, #a47e3c); /* Dégradé métallique */
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Texture et effets supplémentaires */
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7)),
+    url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); /* Texture légère */
+  background-size: cover;
+  opacity: 0.3; /* Texture subtile par défaut */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition fluide */
+  pointer-events: none;
+}
+
+/* Effet au survol */
+.image-container:hover::after {
+  opacity: 0.5; /* Accentuation de la texture */
+  transform: scale(1.05); /* Légère expansion pour un effet dynamique */
+}
+.image-item-one {
+  width: 200px;
+  height: auto;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.image-item-two {
+  width: 200px;
+  height: auto;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.image-item-three {
+  width: 200px;
+  height: auto;
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.image-item-four {
+  width: 200px;
+  height: auto;
+  grid-area: 1 / 4 / 2 / 5;
+  place-self: center;
+}
+
+.image-item-five {
+  width: 200px;
+  height: auto;
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.image-item-six {
+  width: 200px;
+  height: auto;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.image-item-seven {
+  width: 200px;
+  height: auto;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.image-item-eight {
+  width: 200px;
+  height: auto;
+  grid-area: 2 / 3 / 3 / 4;
+  align-self: center;
+  filter: brightness(0.2);
+}
+
+.image-item-nine {
+  width: 200px;
+  height: auto;
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.image-item-ten {
+  width: 200px;
+  height: auto;
+  grid-area: 2 / 5 / 3 / 6;
 }

@@ -1,5 +1,15 @@
 import "./homePage.css";
 import MathieuPriez from "../../assets/images/moi.jpg";
+import css from "../../assets/images/css.png";
+import html from "../../assets/images/html.png";
+import javascript from "../../assets/images/js.png";
+import sql from "../../assets/images/mysql.png";
+import git from "../../assets/images/git.png";
+import github from "../../assets/images/github.png";
+import scrum from "../../assets/images/scrum.png";
+import express from "../../assets/images/express.png";
+import react from "../../assets/images/react.png";
+import node from "../../assets/images/node.png";
 
 function HomePage() {
   return (
@@ -24,39 +34,26 @@ function HomePage() {
           suis prêt à devenir un atout pour votre équipe
         </p>
       </div>
-      <div className="container">
-        <img src={MathieuPriez} alt="Mathieu_Priez" className="mathieu-priez" />
-        <p className="presentation">
-          Après 12 ans en tant que Conseiller Clientèle, j’ai décidé de donner
-          un nouvel élan à ma carrière en me formant au développement web, prêt
-          à relever des défis techniques et à explorer ma créativité. Mon
-          expérience dans la relation client m’a permis de développer des
-          qualités précieuses : une écoute attentive, la capacité de résoudre
-          des problèmes complexes et l’habitude d’accompagner les clients dans
-          la réalisation de leurs projets. Désormais, je mets ces compétences au
-          service de la technologie et de l’innovation, avec l’ambition de créer
-          des solutions numériques qui font la différence. Actuellement, je suis
-          à la recherche d’une alternance dans le développement Web. Cette
-          opportunité me permettrait de mettre en pratique mes acquis,
-          d’enrichir
-        </p>
-      </div>
-      <div className="container">
-        <img src={MathieuPriez} alt="Mathieu_Priez" className="mathieu-priez" />
-        <p className="presentation">
-          Après 12 ans en tant que Conseiller Clientèle, j’ai décidé de donner
-          un nouvel élan à ma carrière en me formant au développement web, prêt
-          à relever des défis techniques et à explorer ma créativité. Mon
-          expérience dans la relation client m’a permis de développer des
-          qualités précieuses : une écoute attentive, la capacité de résoudre
-          des problèmes complexes et l’habitude d’accompagner les clients dans
-          la réalisation de leurs projets. Désormais, je mets ces compétences au
-          service de la technologie et de l’innovation, avec l’ambition de créer
-          des solutions numériques qui font la différence. Actuellement, je suis
-          à la recherche d’une alternance dans le développement Web. Cette
-          opportunité me permettrait de mettre en pratique mes acquis,
-          d’enrichir
-        </p>
+      <div className="image-container">
+        <img src={css} alt="css" className="image-item-one" />
+
+        <img src={html} alt="html" className="image-item-two" />
+
+        <img src={javascript} alt="javascript" className="image-item-three" />
+
+        <img src={sql} alt="sql" className="image-item-four" />
+
+        <img src={git} alt="git" className="image-item-five" />
+
+        <img src={github} alt="github" className="image-item-six" />
+
+        <img src={scrum} alt="scrum" className="image-item-seven" />
+
+        <img src={express} alt="express" className="image-item-eight" />
+
+        <img src={react} alt="react" className="image-item-nine" />
+
+        <img src={node} alt="node" className="image-item-ten" />
       </div>
     </div>
   );

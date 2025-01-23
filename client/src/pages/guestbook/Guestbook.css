@@ -1,0 +1,163 @@
+/* Animation d'apparition */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.allpage{ animation: fadeIn 1s ease-in-out;}
+
+.guestbook-container {
+  max-width: 30%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+    background: linear-gradient(90deg, #3a3a3a, #2c2c2c); /* Couleur de fond métallique sombre */
+  border: 3px solid #a47e3c; /* Bordure dorée pour un style antique */
+  border-radius: 15px; /* Coins arrondis pour plus de fluidité */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5), inset 0 2px 4px
+    rgba(255, 255, 255, 0.1); /* Effet en relief */
+  opacity: 0.95; /* Légèrement transparent pour l'esthétique */
+  transition: box-shadow 0.3s ease; /* Transition douce */
+}
+
+.guestbook-title {
+  text-align: center;
+  font-family: "Cinzel", serif; /* Police avec une esthétique élégante et rétro */
+  color: #d4af37; /* Or brillant */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+    0px 0px 10px rgba(212, 175, 55, 0.8); /* Ombre et éclat lumineux */
+  font-size: 3rem; /* Taille importante pour un effet impactant */
+  margin: 20px 0;
+  letter-spacing: 2px; /* Espacement pour un look raffiné */
+  border-bottom: 2px solid #d4af37; /* Ligne dorée sous le titre */
+  padding-bottom: 10px;
+  background: linear-gradient(90deg, #1c1c1c, #383838); /* Fond métallique */
+  display: inline-block; /* Limite le fond à la largeur du texte */
+  border-radius: 8px; /* Coins légèrement arrondis pour adoucir le style */
+  padding: 10px 20px; /* Espacement interne */
+}
+
+.guestbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.guestbook-form input,
+.guestbook-form textarea {
+  max-width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.guestbook-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.guestbook-form button:hover {
+  background-color: #0056b3;
+}
+
+.guestbook-messages {
+   display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  border: red 1px solid;
+  max-width: 100vw;
+    border: 5px double #a47e3c; /* Bordure cuivrée */
+  border-radius: 20px; /* Coins arrondis */
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.5), /* Ombre externe */
+    inset 0 4px 10px rgba(255, 255, 255, 0.1), /* Lumière interne subtile */
+    inset 0 -4px 10px rgba(0, 0, 0, 0.3); /* Ombre interne subtile */
+  margin: 15vh auto; /* Centrage vertical et horizontal */
+  place-self: center;
+  position: relative; /* Nécessaire pour l'effet ::after */
+  overflow: hidden; /* Empêche les débordements */
+  background: linear-gradient(135deg, #3e3b32, #a47e3c); 
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.95; /* Légèrement transparent pour l'esthétique */
+}
+
+.guestbook-messages::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7)),
+    url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); /* Texture légère */
+  background-size: cover;
+  opacity: 0.3; /* Texture subtile par défaut */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition fluide */
+  pointer-events: none;
+}
+
+.guestbook-message {
+  border: 1px solid #aaa; /* Bordure légèrement plus foncée */
+  border-radius: 10px; /* Coins arrondis pour un effet de carnet */
+  padding: 15px; /* Espacement intérieur pour le texte */
+    background: repeating-linear-gradient(
+    to bottom,
+    #f5ecd8, /* Jaune pâle pour le fond de page */
+    #f5ecd8 30px,
+    #e8dcb8 31px /* Lignes légèrement plus foncées pour un effet vieilli */
+  ); 
+  line-height: 30px; /* Alignement du texte avec les lignes de fond */
+  font-family: "Georgia", serif; /* Police manuscrite ou élégante */
+  border-radius: 15px; /* Coins arrondis pour plus de fluidité */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5), inset 0 2px 4px
+    rgba(255, 255, 255, 0.1); 
+  max-width: 200px;
+  width: 200px;
+}
+.guestbook-message:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px; /* Ajuste la position à gauche de la boîte */
+  width: 10px;
+  height: calc(100% - 20px);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 10px,
+    #aaa 11px /* Couleur des trous */
+  );
+  border-radius: 50%; /* Pour simuler des trous circulaires */
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+}
+
+p{
+  margin: 0;
+  width:100%;
+}
+
+/* .guestbook-message h3 {
+  margin: 0 0 5px;
+  color: #007bff;
+}
+
+.guestbook-message p {
+  margin: 0;
+  color: #555;
+} */

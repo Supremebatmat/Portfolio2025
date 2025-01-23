@@ -30,7 +30,7 @@ body {
   /* opacity: 0.85; */
   transition: box-shadow 0.3s ease;
   z-index: 1; /* Assurez-vous que ce conteneur ne soit pas derrière */
-  border: 5px double #a47e3c;
+  border: 8px double #a47e3c;
 }
 
 .container-project {
@@ -102,3 +102,4 @@ body {
   justify-self: center;
   z-index: 1;
 }
+

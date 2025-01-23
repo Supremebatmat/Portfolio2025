@@ -22,7 +22,7 @@ function NavBar() {
           </button>
         </li>
         <li>
-          <button type="button">Guest-Book</button>
+          <button type="button" onClick={() => navigate("/guestbook")}>Livre d'Or</button>
         </li>
       </ul>
     </div>
